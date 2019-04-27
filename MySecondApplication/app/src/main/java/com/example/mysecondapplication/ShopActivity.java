@@ -14,7 +14,7 @@ public class ShopActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
         TextView textview = findViewById(R.id.clickPowerDisplay);
-        clickPowerString = Integer.toString(MainActivity.clickPower*10);
+        clickPowerString = Integer.toString(MainActivity.clickPower*MainActivity.clickPower);
         textview.setText(clickPowerString);
         TextView textView = findViewById(R.id.clickPoints);
         MainActivity.clickPointString= Integer.toString(MainActivity.clickPointCounter);
@@ -23,12 +23,12 @@ public class ShopActivity extends AppCompatActivity {
 
 
     public void clickPowerUp(View view){
-        if (MainActivity.clickPointCounter >= (10*MainActivity.clickPower)) {
-            MainActivity.clickPointCounter -=(10 * MainActivity.clickPower);
+        if (MainActivity.clickPointCounter >= (MainActivity.clickPower * MainActivity.clickPower)) {
+            MainActivity.clickPointCounter -=(MainActivity.clickPower * MainActivity.clickPower);
             MainActivity.clickPower++;
 
             TextView textview = findViewById(R.id.clickPowerDisplay);
-            clickPowerString = Integer.toString(MainActivity.clickPower*10);
+            clickPowerString = Integer.toString(MainActivity.clickPower*MainActivity.clickPower);
             textview.setText(clickPowerString);
             TextView textView = findViewById(R.id.clickPoints);
             MainActivity.clickPointString= Integer.toString(MainActivity.clickPointCounter);

@@ -7,14 +7,25 @@
     tools:context=".ShopActivity">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
         android:layout_marginLeft="84dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="8dp"
+        android:text="Step: Power up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
         android:onClick="clickPowerUp"
         android:text="Click: Power up"
+        app:layout_constraintEnd_toStartOf="@+id/clickPowerDisplay"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,12 +35,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="124dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text=" "
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,26 +48,28 @@
         android:id="@+id/clickPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="276dp"
-        android:layout_marginRight="276dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="228dp"
+        android:layout_marginRight="228dp"
         android:text="   "
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Click Points"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Click Points:"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/clickPoints"
         app:layout_constraintEnd_toStartOf="@+id/clickPoints"
-        app:layout_constraintHorizontal_bias="0.172"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
