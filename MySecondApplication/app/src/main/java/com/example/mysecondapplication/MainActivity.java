@@ -1,5 +1,6 @@
 package com.example.mysecondapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,4 +23,8 @@ public class MainActivity extends AppCompatActivity {
         counterString= Integer.toString(clickCounter);
         textView.setText(counterString);
 }
+    public void goToShop(View view) {
+        Intent intent = new Intent(this, ShopActivity.class);
+        startActivity(intent);
+    }
 }
