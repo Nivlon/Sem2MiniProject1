@@ -27,7 +27,7 @@
         android:onClick="clickPowerUp"
         android:text="@string/btn_clickPwrUp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clickPoints" />
+        app:layout_constraintTop_toBottomOf="@+id/clickPointsShop" />
 
     <TextView
         android:id="@+id/clickPowerCost"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="@+id/button3" />
 
     <TextView
-        android:id="@+id/clickPoints"
+        android:id="@+id/clickPointsShop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -60,8 +60,8 @@
         android:layout_height="wrap_content"
         android:text="@string/text_clickPoints"
         android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/clickPoints"
-        app:layout_constraintEnd_toStartOf="@+id/clickPoints"
+        app:layout_constraintBaseline_toBaselineOf="@+id/clickPointsShop"
+        app:layout_constraintEnd_toStartOf="@+id/clickPointsShop"
         app:layout_constraintStart_toStartOf="@+id/button3" />
 
     <TextView
@@ -79,6 +79,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:onClick="stepPowerUp"
         android:text="@string/btn_stepPwrUp"
         app:layout_constraintStart_toStartOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/button4" />
@@ -108,6 +109,8 @@
         android:layout_marginBottom="8dp"
         android:text="@string/text_lvl"
         app:layout_constraintBottom_toTopOf="@+id/clickPowerLvl"
+        app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/button3" />
 
     <TextView
@@ -150,7 +153,7 @@
         app:layout_constraintStart_toStartOf="@+id/textView7" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/stepPowerLvl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -160,7 +163,7 @@
         app:layout_constraintTop_toTopOf="@+id/button5" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/stepPowerCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -175,16 +178,16 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/text_lvl"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintBottom_toTopOf="@+id/stepPowerLvl"
         app:layout_constraintStart_toStartOf="@+id/textView10" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textview88"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/text_cost"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintBottom_toTopOf="@+id/stepPowerCost"
         app:layout_constraintStart_toStartOf="@+id/textView11" />
 
 </android.support.constraint.ConstraintLayout>
