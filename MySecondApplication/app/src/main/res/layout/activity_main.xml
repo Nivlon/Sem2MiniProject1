@@ -11,6 +11,7 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginBottom="72dp"
+        android:background="@mipmap/TheFoggening"
         android:onClick="sendMessage"
         android:text="+"
         android:textSize="150sp"
