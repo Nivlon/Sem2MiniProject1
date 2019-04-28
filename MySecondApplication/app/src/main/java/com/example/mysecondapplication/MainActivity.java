@@ -88,5 +88,5 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         //Not in use
     }
 
-    
+
 }
