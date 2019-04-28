@@ -48,7 +48,7 @@ public class ShopActivity extends AppCompatActivity {
         if (MainActivity.clickPointCounter >= shakePowerCost) {
             MainActivity.clickPointCounter -= shakePowerCost;
             MainActivity.shakePower++;
-            shakePowerCost = 100 + MainActivity.shakePower ^ 2;
+            shakePowerCost = 100 + MainActivity.shakePower * MainActivity.shakePower;
 
             refreshDisplay();
         }
@@ -59,7 +59,7 @@ public class ShopActivity extends AppCompatActivity {
         if (MainActivity.clickPointCounter >= stepPowerCost) {
             MainActivity.clickPointCounter -= stepPowerCost;
             MainActivity.stepPower++;
-            stepPowerCost = 100+MainActivity.stepPower^2;
+            stepPowerCost = 100+MainActivity.stepPower*MainActivity.stepPower;
         }
         refreshDisplay();
     }
@@ -73,22 +73,4 @@ public class ShopActivity extends AppCompatActivity {
         textShakePowerLvl.setText(MainActivity.shakePower+"");
         textStepPowerLvl.setText(MainActivity.stepPower+"");
     }
-    /*public void whatPower(View view) {
-        if (view.getId() == (R.id.shakePowerCost)){
-            powerUp(shakePowerString, MainActivity.shakePower);
-        } else if (view.getId()== (R.id.clickPowerCost)) {
-            powerUp(clickPowerString, MainActivity.clickPower);
-        }
-
-    }
-
-    public void powerUp(String pwrString, int pwrValue) {
-        MainActivity.clickPointCounter -= (pwrValue * pwrValue);
-        pwrValue++;
-
-        pwrString = Integer.toString(pwrValue * pwrValue);
-        textview.setText(pwrString);
-        MainActivity.clickPointString = Integer.toString(MainActivity.clickPointCounter);
-        textView.setText(MainActivity.clickPointString);
-    }*/
 }
