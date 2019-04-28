@@ -15,7 +15,7 @@ import static android.hardware.SensorManager.GRAVITY_EARTH;
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
 
     public static int clickPower = 1;
-    public static int shakePower = 1;
+    public static int shakePower = 0;
     public static int clickPointCounter = 0;
     public static String clickPointString = "0";
     public static boolean accelDownwardsCheck=true;
@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView textView = findViewById(R.id.clickPoints);
-        clickPointString= Integer.toString(clickPointCounter);
+        clickPointString = Integer.toString(clickPointCounter);
         textView.setText(clickPointString);
-        sensorManager=(SensorManager) getSystemService(SENSOR_SERVICE);
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensorManager.registerListener(this, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
     }
 
